@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Modern Login Form</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="card">
+
+<h1>Welcome Back</h1>
+
+<p class="subtitle">
+Login to continue
+</p>
+
+<form id="loginForm">
+
+<div class="input-group">
+
+<label>Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name">
+
+<small class="error" id="nameError"></small>
+
+</div>
+
+<div class="input-group">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email">
+
+<small class="error" id="emailError"></small>
+
+</div>
+
+<div class="input-group">
+
+<label>Password</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Enter password">
+
+<span id="togglePassword">👁</span>
+
+</div>
+
+<small class="error" id="passwordError"></small>
+
+</div>
+
+<div class="input-group">
+
+<label>Captcha</label>
+
+<div class="captcha-container">
+
+<div id="captcha"></div>
+
+<button
+type="button"
+id="reloadCaptcha">
+
+🔄
+
+</button>
+
+</div>
+
+<input
+type="text"
+id="userCaptcha"
+placeholder="Enter Captcha">
+
+<small class="error" id="captchaError"></small>
+
+</div>
+
+<button
+type="submit"
+class="btn">
+
+Login
+
+</button>
+
+<p class="bottom">
+
+Don't have an account?
+
+<a href="register.html">
+
+Register
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

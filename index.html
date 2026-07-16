@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+
+background:linear-gradient(-45deg,#667eea,#764ba2,#23d5ab,#00c9ff);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+
+width:450px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+border:1px solid rgba(255,255,255,.3);
+
+}
+
+h1{
+
+color:white;
+margin-bottom:20px;
+
+}
+
+p{
+
+color:white;
+font-size:20px;
+margin-bottom:30px;
+
+}
+
+#username{
+
+font-weight:bold;
+color:#FFF176;
+
+}
+
+button{
+
+width:100%;
+padding:14px;
+
+border:none;
+border-radius:10px;
+
+font-size:18px;
+font-weight:bold;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff512f,#dd2476);
+
+color:white;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dashboard</h1>
+
+<p>
+
+Welcome,
+
+<span id="username"></span>
+
+🎉
+
+</p>
+
+<button id="logoutBtn">
+
+Logout
+
+</button>
+
+</div>
+
+<script>
+
+const user =
+JSON.parse(localStorage.getItem("user"));
+
+if(user){
+
+document.getElementById("username").innerHTML =
+user.name;
+
+}
+else{
+
+window.location.href="login.html";
+
+}
+
+document.getElementById("logoutBtn")
+.addEventListener("click",function(){
+
+localStorage.removeItem("user");
+
+alert("Logged Out Successfully");
+
+window.location.href="login.html";
+
+});
+
+</script>
+
+</body>
+</html>
